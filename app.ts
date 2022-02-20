@@ -122,7 +122,7 @@ const applyDiscount = (code: string): void => {
         (item) => item.title === discountCode.applied
       );
       if (!product?.discountStatus) {
-        const discountAmount = (product?.price * discountCode.value) / 100;
+        const discountAmount = (singleTotalPrice * discountCode.value) / 100;
         product?.discountStatus = true;
         console.log(discountAmount);
       } else {
@@ -131,4 +131,4 @@ const applyDiscount = (code: string): void => {
     }
   }
 };
-applyDiscount("singleDiscount");
+applyDiscount("singleDiscount"); 
